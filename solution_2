@@ -1,0 +1,5 @@
+select cu.customer_id,cu.name,concat("+",co.country_code,cu.phone_number)
+from customers as cu 
+left join country_codes as co
+on co.country=cu.country
+order by cu.customer_id;
