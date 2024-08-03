@@ -1,0 +1,5 @@
+SELECT si.roll_number,si.name FROM student_information si
+join examination_marks em ON
+si.roll_number=em.roll_number
+group by si.roll_number,si.name
+having sum(em.subject_one+em.subject_two+em.subject_three)<100;
